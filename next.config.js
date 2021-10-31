@@ -1,3 +1,5 @@
+const withPWA = require("next-pwa");
+const runtimeCaching = require("next-pwa/cache");
 const withTM = require("next-transpile-modules")([
   "@mui/material",
   "@mui/system",
@@ -29,28 +31,36 @@ switch (process.env.NODE_ENV) {
     break;
 }
 console.log(env);
-module.exports = withTM({
-  reactStrictMode: true,
-  compress: true,
-  env: {
-    ...env,
-    GOOGLE_KEY:
-      "868192905160-j0qhnlvungobmcpanj15r3312qniatt3.apps.googleusercontent.com",
-    GOOGLE_SECRET: "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",
-    FACEBOOK_KEY: "881112199145119",
-    FACEBOOK_SECRET: "d721037bb196adbb2d75546f2d35bb8b",
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+    runtimeCaching,
   },
-  eslint: {
-    dirs: ["pages", "component", "utils"],
-  },
-  images: {
-    domains: [env.NEXT_PUBLIC_URL],
-  },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@mui/styled-engine": "@mui/styled-engine-sc",
-    };
-    return config;
-  },
+  ...withTM({
+    reactStrictMode: true,
+    compress: true,
+    env: {
+      ...env,
+      GOOGLE_KEY:
+        "868192905160-j0qhnlvungobmcpanj15r3312qniatt3.apps.googleusercontent.com",
+      GOOGLE_SECRET: "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",
+      FACEBOOK_KEY: "881112199145119",
+      FACEBOOK_SECRET: "d721037bb196adbb2d75546f2d35bb8b",
+    },
+    eslint: {
+      dirs: ["pages", "component", "utils"],
+    },
+    images: {
+      domains: [env.NEXT_PUBLIC_URL],
+    },
+    webpack: (config) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@mui/styled-engine": "@mui/styled-engine-sc",
+      };
+      return config;
+    },
+  }),
 });

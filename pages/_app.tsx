@@ -26,10 +26,30 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Next App</title>
         <link href="/favicon.ico" rel="icon" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
-          content="minimum-scale=1, initial-scale=1, width=device-width"
           name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
         />
+        <meta name="theme-color" content={theme.palette.primary.main} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <meta name="description" content="Ungga" />
+        <meta property="og:title" content="Ungga" />
+        <meta property="og:description" content="Ungga" />
+        <meta property="og:url" content="https://ungga.com/" />
+        <meta property="og:type" content="website" />
+        <link rel="apple-touch-icon" href="/img/Ungga.svg" />
+        <link rel="icon" href="/img/Ungga.svg" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

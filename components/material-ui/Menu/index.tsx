@@ -37,7 +37,6 @@ export default function TopBar() {
     handleMobileMenuClose();
   };
   const handleMobileMenuOpen = (event: MouseEvent<HTMLElement>) => {
-    console.log(event.currentTarget);
     setMobileMoreAnchorEl(event.currentTarget);
   };
   const menuId = "primary-search-account-menu";

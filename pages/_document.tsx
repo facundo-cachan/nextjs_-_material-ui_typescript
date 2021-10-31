@@ -39,13 +39,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="es">
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
-          />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
@@ -54,17 +47,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          />
-          <meta name="description" content="Ungga" />
-          <meta property="og:title" content="Ungga" />
-          <meta property="og:description" content="Ungga" />
-          <meta property="og:url" content="https://ungga.com/" />
-          <meta property="og:type" content="website" />
-          <link rel="apple-touch-icon" href="/img/Ungga.svg" />
-          <link rel="icon" href="/img/Ungga.svg" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

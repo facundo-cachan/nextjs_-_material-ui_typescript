@@ -1,0 +1,27 @@
+[
+    {
+        "name": "info@ungga.com",
+        "icon": "email",
+        "path": "mailto:info@ungga.com"
+    },
+    {
+        "name": "(33) 3110-0083",
+        "icon": "whatsapp",
+        "path": "https://web.whatsapp.com/send?phone=3331100083"
+    },
+    {
+        "name": "Ungga Inmobiliaria",
+        "icon": "facebook",
+        "path": "https://www.facebook.com/UnggaInmobiliaria"
+    },
+    {
+        "name": "@_ungga_",
+        "icon": "instagram",
+        "path": "https://www.instagram.com/_ungga_/"
+    },
+    {
+        "name": "Ungga Inmobiliaria",
+        "icon": "youtube",
+        "path": "https://www.youtube.com/channel/UCCUZT3kyXni84IE4LnVmYvg"
+    }
+]

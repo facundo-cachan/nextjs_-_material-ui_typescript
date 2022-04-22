@@ -43,7 +43,7 @@
     "graphql": "^16.0.0",
     "graphql-request": "^3.6.1",
     "next": "latest",
-    "next-auth": "^3.29.0",
+    "next-auth": "^4.3.2",
     "next-pwa": "^5.4.0",
     "next-transpile-modules": "latest",
     "react": "latest",
